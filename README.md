@@ -3,7 +3,7 @@
 ![voxelizer-thumb](https://github.com/user-attachments/assets/99961701-ac22-410d-9c85-ebcff554a802)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 
 ---
 
@@ -173,3 +173,21 @@ Pixelates UV coordinates based on grid-level divisions.
 - Safe undo/redo support through Blender’s operator stack.  
 
 **Voxelizer** transforms meshes and materials into precise voxel structures — perfect for stylized 3D art, motion graphics, and game asset preprocessing.
+
+---
+
+## Install
+
+Needs Blender 4.2 or later. Get the zip from [tfmstyle.com](https://tfmstyle.com), then in Blender open Edit > Preferences > Get Extensions, open the menu at the top right and pick Install from Disk.
+
+To build the zip yourself, run this in the repo folder:
+
+```bash
+blender --command extension build
+```
+
+---
+
+## License
+
+GPL 3.0 or later. See [LICENSE](LICENSE).
