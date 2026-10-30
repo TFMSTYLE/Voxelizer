@@ -4,7 +4,7 @@
 bl_info = {
     "name": "Voxelizer",
     "author": "The French Monkey",
-    "version": (1, 0, 2),
+    "version": (1, 0, 3),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Voxelizer",
     "description": "Turn objects into voxels using universal voxel grid resolution",
@@ -672,7 +672,7 @@ class OBJECT_OT_undo_voxelizer_texture(Operator):
 class VoxelizerSettings(PropertyGroup):
     grid_level: IntProperty(
         name="Grid Level",
-        description="Universal voxel grid resolution (1=largest, 8=smallest)",
+        description="Universal voxel grid resolution (1=largest, 6=smallest)",
         default=2,
         min=1,
         max=6,

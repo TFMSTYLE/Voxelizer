@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "tfmstyle_voxelizer"
-version = "1.0.2"
+version = "1.0.3"
 name = "TFMSTYLE - Voxelizer"
 tagline = "Turn objects into voxels using universal voxel grid resolution"
 maintainer = "The French Monkey"
