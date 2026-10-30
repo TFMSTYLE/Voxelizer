@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Added update checks: when a new version is published on Relay, an Update button appears in this panel. Nothing goes online when Allow Online Access is off, and Blender store installs keep updating through the store
+
 ## 1.0.1
 
 The source code is now in this repository, with the license it has always been released under.

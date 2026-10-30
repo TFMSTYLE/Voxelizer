@@ -4,7 +4,7 @@
 bl_info = {
     "name": "Voxelizer",
     "author": "The French Monkey",
-    "version": (1, 0, 1),
+    "version": (1, 0, 2),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Voxelizer",
     "description": "Turn objects into voxels using universal voxel grid resolution",
@@ -19,6 +19,11 @@ from mathutils import Matrix, Vector
 from bpy.types import Operator, Panel, PropertyGroup
 from bpy.props import IntProperty, PointerProperty
 from mathutils.bvhtree import BVHTree
+
+try:
+    from . import relay_updater
+except ImportError:  # the Addon Collection has its own updates
+    relay_updater = None
 
 # ------------------------------------------------------------------------
 # Universal Grid System
@@ -685,6 +690,8 @@ class VIEW3D_PT_voxelizer(bpy.types.Panel):
     bl_category = "Voxelizer"
 
     def draw(self, context):
+        if relay_updater:
+            relay_updater.draw(self.layout)
         layout = self.layout
         settings = context.scene.voxelizer_settings
 
@@ -743,12 +750,16 @@ classes = (
 )
 
 def register():
+    if relay_updater:
+        relay_updater.register("blender-voxelizer")
     for cls in classes:
         bpy.utils.register_class(cls)
     
     bpy.types.Scene.voxelizer_settings = PointerProperty(type=VoxelizerSettings)
 
 def unregister():
+    if relay_updater:
+        relay_updater.unregister()
     del bpy.types.Scene.voxelizer_settings
     
     for cls in reversed(classes):

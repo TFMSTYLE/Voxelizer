@@ -3,7 +3,7 @@
 ![voxelizer-thumb](https://github.com/user-attachments/assets/99961701-ac22-410d-9c85-ebcff554a802)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.1  
+**Version:** 1.0.2  
 
 ---
 
