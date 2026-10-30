@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+
+id = "voxelizer"
+version = "1.0.0"
+name = "TFMSTYLE - Voxelizer"
+tagline = "Turn objects into voxels using universal voxel grid resolution"
+maintainer = "The French Monkey"
+license = ["SPDX:GPL-3.0-or-later"]
+type = "add-on"
+blender_version_min = "4.2.0"
+
+website = "https://tfmstyle.com"
+
