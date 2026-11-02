@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Updates now come from one place. Installed from the Blender store or from the TFMSTYLE repository, Blender updates this addon itself and the Update button here stays hidden. Installed from a zip, it still updates itself from Relay
+
 ## 1.0.3
 
 - Fixed the Grid Level tooltip, which said there were 8 levels. There are 6
